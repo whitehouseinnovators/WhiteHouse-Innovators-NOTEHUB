@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Notes Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+   <!-- Left Section -->
+<div class="left-section">
+  <!-- College Logo -->
+  <!-- College Logo with larger width -->
+<img src="Photos/college-logo.jpg" alt="College Logo" class="logo-img" style="width: 400px;">
+
+
+  <!-- Club Logo -->
+  <img src="/Photos/clublogo.png" alt="WhiteHouse Innovators Logo" class="logo-img">
+
+  <h1 class="logo">📘 WhiteHouse Innovators NotesHub</h1>
+  <p class="tagline">Your all-in-one portal for college notes.  
+    Register once and access your course materials instantly.</p>
+  <p>If you forgot your password contact to the service provider</p>
+</div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+
+      <!-- Login -->
+      <div class="form-card fade-in">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email address">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button class="btn" onclick="login()">Login</button>
+        <p class="switch-text">Don’t have an account? <span onclick="toggleForms()">Register</span></p>
+      </div>
+
+      <!-- Register -->
+      <div class="form-card fade-in hidden" id="registerForm">
+        <h2>Register</h2>
+        <input type="text" id="regName" placeholder="Full Name">
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="password" id="regPassword" placeholder="Password">
+        <select id="regCourse">
+          <option value="">-- Select Course --</option>
+          <option value="BIT">BIT</option>
+          <option value="BBA">BE Computer</option>
+        </select>
+        <input type="number" id="regSemester" placeholder="Semester (1-8)">
+        <button class="btn" onclick="register()">Register</button>
+        <p class="switch-text">Already have an account? <span onclick="toggleForms()">Login</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Toggle between login/register
+    function toggleForms() {
+      document.querySelector('.form-card').classList.toggle('hidden');
+      document.getElementById('registerForm').classList.toggle('hidden');
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
