@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Course - NotesHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset and basic */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: #f0f2f5; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
+    a { text-decoration: none; }
+
+    /* Container */
+    .container { max-width: 900px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); flex: 1; }
+
+    /* Logo section */
+    .logo-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    .logo-section img {
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .logo-section img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Welcome */
+    #welcome { font-size: 1.8rem; margin-bottom: 30px; color: #1a73e8; text-align: center; animation: fadeIn 1.5s ease forwards; }
+
+    /* Course cards */
+    .course-card { margin-bottom: 30px; animation: fadeIn 1.5s ease forwards; }
+    .course-title { font-size: 1.5rem; margin-bottom: 15px; color: #444; text-align: center; }
+
+    .semesters { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+    /* Semester button */
+    .semester-btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1a73e8, #4285f4);
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .semester-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      background: #1a73e8;
+      color: #fff;
+      font-size: 0.9rem;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .semester-btn { flex: 1 1 100%; text-align: center; }
+      .logo-section { flex-direction: column; gap: 15px; }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo Section -->
+    <div class="logo-section">
+      <!-- College Logo with inline size -->
+      <img src="Photos/college-logo.jpg" alt="College Logo" style="width: 400px; height: auto;">
+      <!-- Club Logo with inline size -->
+      <img src="Photos/clublogo.png" alt="Club Logo" style="width: 200px; height: auto;">
+    </div>
+
+    <!-- Welcome -->
+    <h2 id="welcome"></h2>
+
+    <!-- BIT Course -->
+    <div class="course-card">
+      <h3 class="course-title">BIT</h3>
+      <div class="semesters">
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1oP6Rolh9-8xVmmaotxyU_Dqny9j8YdaH')">Semester 1</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1d53urEcjUwPNF5gDtiy2GN7eCDrYbyYq')">Semester 2</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1pumXR8leu4JS7pRGlgCPxYTJZf1MS9tT')">Semester 3</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1PXEyvytr_DoGNdQQ-hfL2BH0wo6-vN_-')">Semester 4</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1FunI8jBQxxzQ-J0i400yTWg7yruOjle0')">Semester 5</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1bulYeffeE8ssBVI7LMgmgRDMQLLj0cM8')">Semester 6</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1-saVNn4wKKfh6YTwaxY8L13hRnBG2zsL')">Semester 7</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1pA-nLdvrCxBBWcG4tdxvuA_V9KiYpbHd')">Semester 8</button>
+      </div>
+    </div>
+
+    <!-- BE Computer Course -->
+    <div class="course-card">
+      <h3 class="course-title">BE Computer</h3>
+      <div class="semesters">
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1WlU_1eanr1NzSHuxstkUrv2GS5whS7wg')">Semester 1</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1xNtciFADEPEPxXC0SL5MFwQCgzN0cwPg')">Semester 2</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1TChc4foEJQopK07IxwGt2PaQo4BVFY8k')">Semester 3</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/13ayQuNUQBisHQzoMKVTj6tiwvyisavpv')">Semester 4</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folder/BESEM5_LINK')">Semester 5</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1oyq_-lNLIdZOWVVmw1e6KpxpCNNN0EDd')">Semester 6</button>
+        <button class="semester-btn" onclick="openDrive('https:https://drive.google.com/drive/folders/1VbuJ3ynr-ddxBI2-J5_G8tIX_P_A24F-')">Semester 7</button>
+        <button class="semester-btn" onclick="openDrive('https://drive.google.com/drive/folders/1HCsHNn-ASZekRg3R6bQwM-0oZAntKKAQ')">Semester 8</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Developed and Designed by Bhuwan Raj Pandey  | &copy; 2025 WhiteHouseNotesHub
+  </footer>
+
+  <script>
+    // Redirect if not logged in
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (!user) {
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("welcome").textContent = `Welcome, ${user.name}!`;
+    }
+
+    // Open Google Drive link in new tab
+    function openDrive(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
